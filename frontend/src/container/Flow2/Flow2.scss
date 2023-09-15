@@ -1,11 +1,4 @@
-#home {
-    position: relative;
-    background: url("../../assets/bgIMG3.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat;
-  
-    // disable the default padding styles
+#flowchartb {
     .app__wrapper {
       padding: 0;
   
@@ -15,11 +8,13 @@
     }
   }
   
-  .app__header {
-    flex: 1;
+  .app__chartb {
+    background-image: url('../../assets/thapuchart2.png');
+    background-size: 640px 360px; // 1280x720 960x540 640x360
+    background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
     height: 100%;
-    flex-direction: row;
     
 
     padding: 6rem 2rem 0rem;
@@ -37,7 +32,7 @@
     }
   }
   
-  .app__header-info {
+  .app__chartb-info {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -53,7 +48,7 @@
     }
   }
   
-  .app__header-badge {
+  .app__chartb-badge {
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -96,7 +91,7 @@
     }
   }
   
-  .app__header-circles {
+  .app__chartb-circles {
     flex: 0.75;
     display: flex;
     flex-direction: column;
@@ -167,7 +162,7 @@
     }
   }
   
-  .app__header-img {
+  .app__chartb-img {
     flex: 1;
     height: 100%;
   

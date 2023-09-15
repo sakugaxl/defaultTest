@@ -1,11 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FcFlowChart } from 'react-icons/fc';
-import { ImEye } from 'react-icons/im'
+import React from "react";
+import { motion } from "framer-motion";
+import { FcFlowChart } from "react-icons/fc";
+import { ImEye } from "react-icons/im";
 
-import { AppWrap } from '../../wrapper';
-import { images } from '../../constants';
-import './Header.scss';
+import { AppWrap } from "../../wrapper";
+import { images } from "../../constants";
+import "./Header.scss";
+import { Link } from "react-scroll";
 
 const scaleVariants = {
   whileInView: {
@@ -13,7 +14,7 @@ const scaleVariants = {
     opacity: [0, 1],
     transition: {
       duration: 1,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };
@@ -27,12 +28,22 @@ const Header = () => (
     >
       <div className="app__header-badge">
         <div className="app__flex">
-            <img src={images.logo2} alt="logo2" style={{ width: '800px', height: 'auto' }} />
-          </div>
-          <div>
-          <p className="p-text" >Thapu Wealth Creation is a 100% black owned company established in South Africa focused on comprehensive estate planning services. Partnered with Capital Legacy Solutions, a Wills and Estate Planning company with years of experience, we understand the importance of preserving and protecting your assets for future generations.</p>
-          </div>
+          <img
+            src={images.logo2}
+            alt="logo2"
+            style={{ width: "800px", height: "auto" }}
+          />
         </div>
+        <div>
+          <p className="p-text">
+            Thapu Wealth Creation is a 100% black owned company established in
+            South Africa focused on comprehensive estate planning services.
+            Partnered with Capital Legacy Solutions, a Wills and Estate Planning
+            company with years of experience, we understand the importance of
+            preserving and protecting your assets for future generations.
+          </p>
+        </div>
+      </div>
     </motion.div>
 
     <motion.div
@@ -41,20 +52,22 @@ const Header = () => (
       className="app__header-circles"
     >
       {/* Replace the image elements with the desired icons */}
-      <div className="circle-cmp app__flex" data-tooltip="Vision">
-        <ImEye size={80} />
-        <div className="tooltip">Vision</div>
-      </div>
-
-      <div className="circle-cmp app__flex" data-tooltip="Mission">
-        <FcFlowChart size={120} />
-        <div className="tooltip">
-          Mission
+      <Link to="vision" spy={true} smooth={true} offset={-100} duration={500}>
+        <div className="circle-cmp app__flex" data-tooltip="Vision">
+          <ImEye size={80} />
+          <div className="tooltip">Vision</div>
         </div>
-      </div>
+      </Link>
+
+      <Link to="mission" spy={true} smooth={true} offset={-100} duration={500}>
+        <div className="circle-cmp app__flex" data-tooltip="Mission">
+          <FcFlowChart size={120} />
+          <div className="tooltip">Mission</div>
+        </div>
+      </Link>
     </motion.div>
   </div>
 );
 
 // export default Header
-export default AppWrap(Header, 'home');
+export default AppWrap(Header, "home");

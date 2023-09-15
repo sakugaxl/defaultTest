@@ -7,9 +7,9 @@ export const legacy = {
     datasets: [
       {
         label: 'Legacy Stats',
-        data: [45, 15],
+        data: [45000000, 15000000],
         backgroundColor: ['#ffde22', '#2430af'],
-        hoverOffset: 100
+        hoverOffset: 15
       },
     ],
   };
